@@ -1,7 +1,8 @@
-﻿namespace BlazorOnMvc.ViewModels.Shared
+﻿using Microsoft.AspNetCore.Components;
+
+namespace BlazorOnMvc.ViewModels.Shared;
+
+public class RazorPageBaseViewModel<TComponent> : IRazorPageBaseViewModel where TComponent : IComponent
 {
-    public class RazorPageBaseViewModel
-    {
-        public required Type Type { get; init; }
-    }
+    public Type Type => typeof( TComponent );
 }

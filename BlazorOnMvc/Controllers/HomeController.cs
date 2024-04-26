@@ -18,6 +18,6 @@ public class HomeController : Controller
     {
         return View(
             "RazorPageBase",
-            new RazorPageBaseViewModel { Type = typeof( V.Index ) } );
+            new RazorPageBaseViewModel<V.Index>() );
     }
 }

@@ -1,3 +1,4 @@
+using BlazorOnMvc.ViewModels.Shared;
 using Microsoft.AspNetCore.Mvc;
 using V = BlazorOnMvc.Views.Home;
 
@@ -13,8 +14,10 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-    public async ValueTask<IActionResult> Index()
+    public IActionResult Index()
     {
-        return await this.RazorComponent<V.Index>();
+        return View(
+            "RazorPageBase",
+            new RazorPageBaseViewModel { Type = typeof( V.Index ) } );
     }
 }

@@ -3,4 +3,6 @@
 public interface IRazorPageBaseViewModel
 {
     Type Type { get; }
+
+    object? ModelParameter { get; }
 }

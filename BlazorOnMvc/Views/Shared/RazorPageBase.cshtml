@@ -1,4 +1,11 @@
 ﻿@using BlazorOnMvc.ViewModels.Shared
 @model IRazorPageBaseViewModel
 
-<component type="Model.Type" render-mode="Static" />
+@if (Model.ModelParameter is null)
+{
+    <component type="Model.Type" render-mode="Static"  />
+}
+else
+{
+    <component type="Model.Type" render-mode="Static" param-model="Model.ModelParameter" />
+}

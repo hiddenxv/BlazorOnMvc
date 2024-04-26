@@ -1,2 +1,11 @@
-﻿<h1>Blazor on ASP.NET MVC</h1>
+﻿@code {
+    [Parameter]
+    public required string Model { get; init; }
+}
+
+<h1>Blazor on ASP.NET MVC</h1>
 page by Razor component
+
+<p>
+    parameter: @Model
+</p>

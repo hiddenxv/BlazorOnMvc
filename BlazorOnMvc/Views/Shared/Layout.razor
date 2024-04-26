@@ -1,0 +1,22 @@
+﻿@code {
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blazor on ASP.NET MVC sample</title>
+    </head>
+    <body>
+        <header>
+            header
+        </header>
+        <main>
+            @this.ChildContent
+        </main>
+        <footer>
+            footer
+        </footer>
+    </body>
+</html>
